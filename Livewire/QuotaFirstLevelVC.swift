@@ -36,8 +36,9 @@ class QuotaFirstLevelVC: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! QuotaFirstLevelTableViewCell
         cell.lblCellName.text = self.subquotaArray[indexPath.section].cells[indexPath.row].title
-        cell.lblCompletes.text = self.subquotaArray[indexPath.section].cells[indexPath.row].completes
-        
+        cell.lblCompletes.text = "\(self.subquotaArray[indexPath.section].cells[indexPath.row].completes) / \(self.subquotaArray[indexPath.section].cells[indexPath.row].target)"
+        cell.lblRemaining.text = self.subquotaArray[indexPath.section].cells[indexPath.row].remaining
+
         return cell
     }
     

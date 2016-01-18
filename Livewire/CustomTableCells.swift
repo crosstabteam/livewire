@@ -9,6 +9,39 @@
 import Foundation
 import UIKit
 
+class QuotaSectionHeaderViewCell: UITableViewCell {
+    
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
+class FieldSummaryHeaderViewCell: UITableViewCell {
+    
+    @IBOutlet weak var lblProjectName: UILabel!
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
 class FieldSummaryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblValue: UILabel!
@@ -29,6 +62,7 @@ class FieldSummaryTableViewCell: UITableViewCell {
 
 class QuotaFirstLevelTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var lblRemaining: UILabel!
     @IBOutlet weak var lblCellName: UILabel!
     @IBOutlet weak var lblCompletes: UILabel!
     

@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         indicator.center = self.view.center
+        indicator.startAnimating()
         self.view.addSubview(indicator)
         
     }
@@ -88,6 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             indicator.startAnimating()
             indicator.backgroundColor = UIColor.whiteColor()
             
+            
             Alamofire.request(.GET,  "http://114.143.128.150/ROService/ROService.svc/ListAllProject/\(self.authKey)").responseString { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response
@@ -132,7 +134,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProjectTableViewCell
         cell.lblProjectName?.text = projectsArray[indexPath.row].projectName
         cell.lblCompletesInfo?.text = "Completes Achieved: \(projectsArray[indexPath.row].qualifiedCompletes) / \(projectsArray[indexPath.row].targetCompletes)"
-        cell.imgFieldStatus.image =  UIImage(named: "green_dot")
+        
+        if(Int(projectsArray[indexPath.row].qualifiedCompletes) >= Int(projectsArray[indexPath.row].targetCompletes)){
+            cell.imgFieldStatus.image =  UIImage(named: "red_dot")
+        }else{
+            cell.imgFieldStatus.image =  UIImage(named: "green_dot")
+        }
+
         return cell
     }
     

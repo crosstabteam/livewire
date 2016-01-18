@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class FieldSummaryVC: UIViewController, UITableViewDataSource {
+class FieldSummaryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     //@IBOutlet weak var lblProjectID: UILabel!
     var fieldSummaryArray = [FieldStatus]()
@@ -21,8 +21,7 @@ class FieldSummaryVC: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-       
+
         self.tabBarController?.navigationItem.title = "Field Summary"
         
         let projectTabBarVC: ProjectTabbedViewController = self.tabBarController as! ProjectTabbedViewController
@@ -89,13 +88,23 @@ class FieldSummaryVC: UIViewController, UITableViewDataSource {
         return self.fieldSummaryArray.count
     }
     
-    /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let  headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderTableViewCell
-        headerCell.backgroundColor = UIColor.cyanColor()
-        headerCell.lblHeader.text = "Europe";
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! FieldSummaryHeaderViewCell
+        headerCell.backgroundColor = UIColor.whiteColor()
+        let projectTabBarVC: ProjectTabbedViewController = self.tabBarController as! ProjectTabbedViewController
+        //self.projectID = (projectTabBarVC.selectedProject?.id)!
+        headerCell.lblProjectName.text = projectTabBarVC.selectedProject?.projectName
+        headerCell.lblProjectName.textColor = UIColor(rgba: "#005502")
+        //headerCell.lblProjectName.textColor = UIColor.greenColor()
+
         
         return headerCell
-    }*/
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 125.0
+    }
+
     
    
     override func didReceiveMemoryWarning() {
