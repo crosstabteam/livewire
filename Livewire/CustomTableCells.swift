@@ -48,6 +48,7 @@ class QuotaFirstLevelTableViewCell: UITableViewCell {
 
 class ProjectTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var imgFieldStatus: UIImageView!
     @IBOutlet weak var lblProjectName: UILabel!
     @IBOutlet weak var lblCompletesInfo: UILabel!
     

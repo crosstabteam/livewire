@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import UIColor_Hex_Swift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -70,7 +71,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
+      
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.barTintColor = UIColor(rgba: "#1FAE66")
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
         
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
@@ -103,6 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                             targetCompletes: item["TargetCompletes"].stringValue, qualifiedCompletes: item["Completes"].stringValue)
                         
                         self.projectsArray.append(p)
+                        print(item)
                     }
                     
                     print("command completed successfully")
@@ -126,6 +132,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProjectTableViewCell
         cell.lblProjectName?.text = projectsArray[indexPath.row].projectName
         cell.lblCompletesInfo?.text = "Completes Achieved: \(projectsArray[indexPath.row].qualifiedCompletes) / \(projectsArray[indexPath.row].targetCompletes)"
+        cell.imgFieldStatus.image =  UIImage(named: "green_dot")
         return cell
     }
     

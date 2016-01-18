@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '01E3DD0D03228766D6CB94B3'
+               BlueprintIdentifier = 'ADF49B9EC8759301BF028AE4'
                BlueprintName = 'Pods-Livewire'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Livewire.framework'>

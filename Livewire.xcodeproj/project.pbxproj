@@ -24,6 +24,7 @@
 		3454038F1C4A5F0B006512FC /* TerminationDetailVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454038E1C4A5F0B006512FC /* TerminationDetailVCViewController.swift */; };
 		345403911C4A812F006512FC /* QuotaFirstLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345403901C4A812F006512FC /* QuotaFirstLevelVC.swift */; };
 		349902F51C25A398008F13BB /* BusinessObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349902F41C25A398008F13BB /* BusinessObjects.swift */; };
+		349FD5801C4D6219004CC8B2 /* RedDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 349FD57F1C4D6219004CC8B2 /* RedDot.png */; };
 		34E4AC141C442AB300D12A93 /* ctOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E4AC131C442AB300D12A93 /* ctOS.png */; };
 		34E4AC161C442D5800D12A93 /* Livewire.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E4AC151C442D5800D12A93 /* Livewire.png */; };
 		34E4AC181C4433C700D12A93 /* square236.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E4AC171C4433C700D12A93 /* square236.png */; };
@@ -54,6 +55,7 @@
 		3454038E1C4A5F0B006512FC /* TerminationDetailVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminationDetailVCViewController.swift; sourceTree = "<group>"; };
 		345403901C4A812F006512FC /* QuotaFirstLevelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotaFirstLevelVC.swift; sourceTree = "<group>"; };
 		349902F41C25A398008F13BB /* BusinessObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessObjects.swift; sourceTree = "<group>"; };
+		349FD57F1C4D6219004CC8B2 /* RedDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedDot.png; sourceTree = "<group>"; };
 		34E4AC131C442AB300D12A93 /* ctOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ctOS.png; path = ../ctOS.png; sourceTree = "<group>"; };
 		34E4AC151C442D5800D12A93 /* Livewire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Livewire.png; sourceTree = "<group>"; };
 		34E4AC171C4433C700D12A93 /* square236.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square236.png; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				340518011C287CEB00EAB0F5 /* TerminationVC.swift */,
 				340518031C287D0C00EAB0F5 /* QuotaVC.swift */,
 				345403901C4A812F006512FC /* QuotaFirstLevelVC.swift */,
+				349FD57F1C4D6219004CC8B2 /* RedDot.png */,
 				34328EF31C256BC1004DDA72 /* Assets.xcassets */,
 				34328EF51C256BC1004DDA72 /* LaunchScreen.storyboard */,
 				34328EF81C256BC1004DDA72 /* Info.plist */,
@@ -213,6 +216,7 @@
 				34E4AC1A1C44371700D12A93 /* glyphicons-120-table.png in Resources */,
 				34E4AC201C44381200D12A93 /* glyphicons-388-log-out.png in Resources */,
 				34E4AC1E1C4437E000D12A93 /* glyphicons-332-dashboard.png in Resources */,
+				349FD5801C4D6219004CC8B2 /* RedDot.png in Resources */,
 				34E4AC241C4445C100D12A93 /* glyphicons-64-power.png in Resources */,
 				34328EF71C256BC1004DDA72 /* LaunchScreen.storyboard in Resources */,
 				344864B01C4D4E5800184A42 /* glyphicons-65-lightbulb.png in Resources */,
