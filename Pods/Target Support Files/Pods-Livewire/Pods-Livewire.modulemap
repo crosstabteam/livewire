@@ -1,0 +1,6 @@
+framework module Pods_Livewire {
+  umbrella header "Pods-Livewire-umbrella.h"
+
+  export *
+  module * { export * }
+}
